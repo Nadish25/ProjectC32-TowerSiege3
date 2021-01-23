@@ -193,8 +193,8 @@ function draw() {
 
   var response=  await fetch("http://worldtimeapi.org/api/timezone/Asia/Tokyo")
  var responseJSON = await  response.json();
- //console.log(responseJSON.datetime);
-var datetime=responseJSON.datetime;
+ 
+ var datetime=responseJSON.datetime;
  var hour=datetime.slice(11,13);
  console.log(hour);
     
@@ -208,6 +208,6 @@ var datetime=responseJSON.datetime;
    }
 
    backgroundImg=loadImage(bg);
-   console.log(backgroundImg);
+   
 
 }
