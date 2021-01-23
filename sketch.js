@@ -12,16 +12,15 @@ var sling;
 var tries=0;
 var bg;
 var beep;
-var backSound;
+
 var bg="bg.jpg";
 var score=0;
-
+var backgroundImg;
 
 function preload()
 {
   
   beep=loadSound("beep-07.mp3")
-  backSound=loadSound("sound.mp3")
   getBackgroundImg();
 }
 
@@ -32,7 +31,7 @@ function setup() {
 	engine = Engine.create();
   world = engine.world;
 
-  backSound.loop();
+  
 
   
 
@@ -192,7 +191,7 @@ function draw() {
     async function getBackgroundImg()
 {
 
-  var response=  await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
+  var response=  await fetch("http://worldtimeapi.org/api/timezone/Asia/Tokyo")
  var responseJSON = await  response.json();
  //console.log(responseJSON.datetime);
 var datetime=responseJSON.datetime;
